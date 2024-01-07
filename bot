@@ -1,0 +1,272 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Collections;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URI;
+
+public class Main {
+    public static void main(String[] args) {
+        // Kullanıcıdan bir sayı alalım
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("İsminiz Nedir ? : ");
+        String kullanici_ismi = scanner1.nextLine();
+
+        System.out.println(kullanici_ismi + " Merhaba Seninle Tanışmak İsterim Sana Bir Kaç Soru Sorabilir Miyim ?  (Evet/Hayır)");
+        // ---------------------------------------------------------------------------
+
+        List<String> cevaplar_listesi1 = new ArrayList<>();
+        cevaplar_listesi1.add("Cevabın İçin Çok Teşekkür Ediyorum...");
+        cevaplar_listesi1.add("O Halde Devammmm");
+        cevaplar_listesi1.add("Çok Memnun Oldummmm");
+        cevaplar_listesi1.add("YAAAAAAAAAAAAA ÇOK MUTLU ETTİN BENİ BEBEĞEM");
+        Collections.shuffle(cevaplar_listesi1);
+        String cikan_ifade =cevaplar_listesi1.get(1);
+
+        List<String> olumsuz_cevaplar_list = new ArrayList<>();
+        olumsuz_cevaplar_list.add("Cevabın Beni Biraz Kırdı Açıkcası...");
+        olumsuz_cevaplar_list.add("Anlıyorum Biraz Üzüldüm...");
+        olumsuz_cevaplar_list.add("Tamam be bas git işine yemedik Alla Alla");
+        olumsuz_cevaplar_list.add("SEN NE ANLATIYON BE ABİ GÖZÜNÜ YİYİM BE ABLA ");
+        olumsuz_cevaplar_list.add( kullanici_ismi + " Cevabın Beni Son Derece Üzdü");
+
+        List<String> nerelisin_cevaplar = new ArrayList<>();
+        nerelisin_cevaplar.add("Çok Güzel Yer Orası Doğal Güzelikleri Falan ");
+        nerelisin_cevaplar.add("Aga Yanlış Anlama Ama Kürt Müsün ?");
+        nerelisin_cevaplar.add("Aga Orada Teröristler Var Diyorlar Dikkat et");
+        nerelisin_cevaplar.add("Kanka Çok Güzel Memleketin Var He Kıskandım " );
+        nerelisin_cevaplar.add("Çok Güzel Yer Değilmiş Be Kanka Sevemiyorum Orayı Ben");
+        nerelisin_cevaplar.add("AGAAAAAAAAAAAAAAA ÇOK GİTMEK İSTİYORUM ORAYA BENİ VALİZİNE KOYUP TAŞIR MISINNN ???? ");
+
+        Collections.shuffle(nerelisin_cevaplar);
+        String nerelisin_cevap = nerelisin_cevaplar.get(1);
+
+        List<String> burc_cevap = new ArrayList<>();
+        burc_cevap.add("Ay Kışkançsındır Sen Şimdi Benden Uzak Dur Lütfen");
+        burc_cevap.add("Allah Gelecekteki Eşine Sabır Versin Güzel İnsan");
+        burc_cevap.add("Güzel İnsan Benden Uzaklaşır Mısın Hiç Çekemem Tavırlarını");
+        burc_cevap.add("Ayyyyyy Duygusalsındır Sen Şimdi Yaaaa");
+        burc_cevap.add("LAN HOŞT GİT GİT GELME GELME ");
+        burc_cevap.add("YAAA SAFSINDIR O ZAMAN SEN ŞİMDİ AGU BUGUCUK SENİİ");
+
+        List<String> kucuk_ifadeler = new ArrayList<>();
+        kucuk_ifadeler.add("Aptalca");
+        kucuk_ifadeler.add("Zaman Kaybı");
+        kucuk_ifadeler.add("Sıkıcı");
+        kucuk_ifadeler.add("Salakça");
+        kucuk_ifadeler.add("Para Tuzağı");
+
+        List<String> sarki_listesi = new ArrayList<>();
+        sarki_listesi.add("https://www.youtube.com/watch?v=pbeiDLdeaYs");
+        sarki_listesi.add("https://www.youtube.com/watch?v=lkcftEx5WJ4");
+        sarki_listesi.add("https://www.youtube.com/watch?v=WPK-Dx_h6Xc");
+        sarki_listesi.add("https://www.youtube.com/watch?v=_k91OjcOCi8");
+        sarki_listesi.add("https://www.youtube.com/watch?v=_k91OjcOCi8");
+        sarki_listesi.add("https://www.youtube.com/watch?v=oD6fL4yyhDk");
+        sarki_listesi.add("https://www.youtube.com/watch?v=HirFutbbIWg");
+        sarki_listesi.add("https://www.youtube.com/watch?v=w2bflzAq5BI");
+
+        Collections.shuffle(sarki_listesi);
+        String rastgele_sarkim = sarki_listesi.get(1);
+
+
+        Collections.shuffle(kucuk_ifadeler);
+        String ifade = kucuk_ifadeler.get(1);
+
+
+        Collections.shuffle(burc_cevap);
+        String burc_cevaplar = burc_cevap.get(1);
+
+
+        Collections.shuffle(olumsuz_cevaplar_list);
+        String olumsuz_ifade = olumsuz_cevaplar_list.get(1);
+
+
+        Scanner scanner3 = new Scanner(System.in);
+        String soru2 = scanner3.nextLine();
+
+
+
+        if (soru2 == null) {
+            System.out.println("Lütfen Cevap DOĞRU CEVAP VER !!!! ");
+        } else if (soru2.equals("Evet")) {
+            System.out.println(cikan_ifade);
+        } else if (soru2.equals("Hayır")) {
+            System.out.println(olumsuz_ifade);
+        } else {
+            System.out.println("Lütfen sadece 'Evet' veya 'Hayır' girin");
+        }
+
+        System.out.println("Yaşın Kaçtı Bu Arada Benimle Paylaşır Mısın ? ");
+
+        Scanner scanner4 = new Scanner(System.in);
+        int yas_soru = scanner4.nextInt();
+
+        if (yas_soru <10) {
+            System.out.println("LAAAN DÜNKÜ BEBE NABER LANNNN");
+        }
+        if (yas_soru >=10 && yas_soru <=20) {
+            System.out.println("Büyüme Be Kardeşim Büyüme... ");
+        }
+        if (yas_soru == 20) {
+            System.out.println("Kardeşim Askerlik Yolu Gözüküyor Hayırlı Teskereler Şimdiden O7");
+        }
+        if (yas_soru >=21 && yas_soru <=40) {
+            System.out.println(kullanici_ismi + "YAŞLANIYORSUN KANKAAAAAAAAAAAAAAA");
+        }
+        if (yas_soru >=41 && yas_soru<=60 ) {
+            System.out.println("Merhaba Teyze Amca Ellerinden Öperim Torunlarının :))) ");
+        }
+        if (yas_soru >60 ) {
+            System.out.println("ABİ ÖLMEYİ UNUTMUŞSUN AMK ");
+        } else {
+            System.out.println(kullanici_ismi + " Lütfen Yaşını Gir Canım ");
+
+        }
+
+        System.out.println(kullanici_ismi + " Sorucam Sorucam Unutuyorum Nereliydin ?");
+        Scanner scanner5 = new Scanner(System.in);
+        String nerelisin_soru = scanner5.nextLine();
+
+        if (nerelisin_soru.equals("Rize")) {
+            System.out.println( kullanici_ismi + " Hemşerim Benim Çok Mutlu Oldum");
+        }
+
+        else if (nerelisin_soru != "Rize") {
+            System.out.println(nerelisin_soru + " "+  nerelisin_cevap);
+        }
+
+
+
+
+        System.out.println(kullanici_ismi + " Burçlara İnanır Mısın? Evet/Hayır");
+        Scanner scannner6 = new Scanner(System.in);
+        String burc_soru = scannner6.nextLine();
+
+        if (burc_soru.equals("Hayır")) {
+            System.out.println(kullanici_ismi + " Ben de İnanmıyorum Ben Burçların " + ifade + " Olduğunu Düşünüyorum ");
+        }
+
+        if (burc_soru.equals("Evet")) {
+            System.out.println("Aaaaaa Çok Güzel Bana Burcunu Söyler Misin " + kullanici_ismi +  " ????");
+            Scanner scanner7 = new Scanner(System.in);
+            String burcsoru_2 = scanner7.nextLine();
+
+            if (burcsoru_2.equals("Yay")) {
+                System.out.println(kullanici_ismi + " Sen Ciddi Misin Benim de Burcum Yayyy");
+            }
+            if (burcsoru_2.equals("Kova")) {
+                System.out.println("Çok Severim " + burcsoru_2 + " Kendisi Özge Hocamın Burcu Olur Ama Sen Özge Hocam Değilsin ZUAHHAHAHAHAHAH ");
+            }
+            if (burcsoru_2.equals("Oğlak")) {
+                System.out.println(burcsoru_2 + " Eskiden Çok Sevdiğim Bir Kızın Burcu Olur Kendisi Eskiler Canlandı Gözümde...");
+            }
+            else if (burcsoru_2 != "Yay" + "Kova" + "Oğlak") {
+                System.out.println(burcsoru_2 + " " + burc_cevaplar);
+            {
+        System.out.println("Hmmmmm Seninle Bir Oyun Oynayalım Mı Ne Dersin (Olmaz/Olur)");
+
+        Scanner scanner8 = new Scanner(System.in);
+        String baslama_sorusu = scanner8.nextLine();
+
+        if (baslama_sorusu.equals("Olmaz")) {
+            System.out.println("Ah Be Ya Keşke Oynasaydık Eğlenebilirdin... :( ");
+        }
+
+        if (baslama_sorusu.equals("Olur")) {
+            System.out.println("Şimdi Sana Matematiğin İlizyonunu Göstericem Hazır Mısın? (Evet/Hayır)");
+            Scanner scannera1 = new Scanner(System.in);
+            String hazir_misin_soru = scannera1.nextLine();
+
+            if (hazir_misin_soru.equals("Hayır")) {
+                System.out.println("A Be Olucak Gibiydi Neden Olmadı Ki....");
+            }
+
+            if (hazir_misin_soru.equals("Evet")) {
+                System.out.println("Şimdi Aklından Bir Sayı Tutmanı İstiyorum (Tuttum/Tutmadım)");
+                Scanner scannera2 = new Scanner(System.in);
+                String tuttun_mu_soru = scannera2.nextLine();
+
+                if (tuttun_mu_soru.equals("Tutmadım")) {
+                    System.out.println("Oyun Bozanlık Yapıyorsun Gidiyorum Ben Hıh ");
+                }
+
+                if (tuttun_mu_soru.equals("Tuttum")) {
+                    System.out.println("Şimdi Bu Sayıyı İki İle Çarp");
+                    System.out.println("Sonra 10 Ekle Ve 2 ile Böl ");
+                    System.out.println("Şimdi Bulduğun Sonucu İlk Tuttuğun Sonuçtan Çıkar ");
+                    System.out.println("Yaptın mı ? (Yaptım/Yapmadım)");
+                    Scanner scannera3 = new Scanner(System.in);
+                    String yaptin_mi_soru = scannera3.nextLine();
+
+                    if (yaptin_mi_soru.equals("Yapmadım")) {
+                        System.out.println("Yüzdün Yüzdün Kuyruğuna Geldin Ve Bıraktın Ne Kaçırdığını Bilsen Ölürdün Gerçekten....");
+                    }
+
+                    if (yaptin_mi_soru.equals("Yaptım")){
+                        System.out.println("Sonuç 5 Çıktı Değil mi ? (Hayır/Evet)");
+
+                        Scanner scannera4 = new Scanner(System.in);
+                        String sonuc = scannera4.nextLine();
+                        if (sonuc.equals("Hayır")) {
+                            System.out.println("Matematiği Yapamıyorsundur ");
+                        }
+                        if (sonuc.equals("Evet"))
+                            System.out.println("Sana Bir Sürprizim Var...");
+                        try {
+                            // Belirli bir web sitesine yönlendirme
+                            String webSiteURL = (rastgele_sarkim);
+                            Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + webSiteURL);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        }
+
+    }}
+}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
